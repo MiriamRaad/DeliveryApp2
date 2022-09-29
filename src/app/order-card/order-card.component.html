@@ -1,0 +1,142 @@
+<section id="order-card" style="background-color: #f93d3d">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12">
+        <div
+          class="card card-registration card-registration-2"
+          style="border-radius: 15px"
+        >
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-8">
+                <div class="p-5">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-5 section-header"
+                  >
+                    <p>Order Card</p>
+                    <p class="mb-0 text-muted">{{ TotalItems }} items</p>
+                  </div>
+                  <hr class="my-4" />
+
+                  <div
+                    class="row mb-4 d-flex justify-content-between align-items-center"
+                    *ngFor="let O of Orders"
+                  >
+                    <div class="col-md-2 col-lg-2 col-xl-2">
+                      <img
+                        [src]="O.img_URL"
+                        class="img-fluid rounded-3"
+                        alt="Cotton T-shirt"
+                      />
+                    </div>
+
+                    <div class="col-md-4 col-lg-4 col-xl-4">
+                      <h6 class="text-black">
+                        <b>Restaurant:</b> {{ O.restaurant }}
+                      </h6>
+                      <h6 class="text-black mb-0">{{ O.name }}</h6>
+                    </div>
+
+                    <div class="col-3 col-md-2 col-lg-2 col-xl-2 d-flex">
+                      <button
+                        class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                      >
+                        <i class="fas fa-minus"></i>
+                      </button>
+
+                      <input
+                        id="form1"
+                        class="input"
+                        min="0"
+                        name="quantity"
+                        value="{{ O.quantity }}"
+                        type="number"
+                        class="form-control form-control-sm"
+                        [(ngModel)]="O.quantity"
+                        (change)="newPrice()"
+                      />
+
+                      <button
+                        class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                      >
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+
+                    <div class="col-md-5 col-lg-2 col-xl-2">
+                      <h6 class="mb-0">
+                        € {{ O.price * O.quantity | number: "1.0-2" }}
+                      </h6>
+                    </div>
+
+                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                      <a href="#!" class="text-muted"
+                        ><i class="fas fa-times"></i
+                      ></a>
+                    </div>
+
+                    <hr class="my-4" />
+                  </div>
+
+                  <div class="pt-5">
+                    <h6 class="mb-0">
+                      <a href="#!" class="ODButton">Back to shop</a>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 bg-grey">
+                <div class="p-5 section">
+                  <p class="fw-bold mb-5 mt-2 pt-1">Summary</p>
+
+                  <hr class="my-4" />
+                  <div class="d-flex justify-content-between mb-5">
+                    <h5 class="text-uppercase">Total price</h5>
+                    <h5>€ {{ Price | number: "1.0-2" }}</h5>
+                  </div>
+
+                  <hr class="my-4" />
+                  <h5 class="text-uppercase mb-3">
+                    Log In To Place Your Order
+                  </h5>
+
+                  <div class="mb-5">
+                    <div class="form-outline">
+                      <h6 class="form-label" for="username">User Name</h6>
+                      <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        class="form-control form-control-lg"
+                        [(ngModel)]="username"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-5">
+                    <div class="form-outline">
+                      <h6 class="form-label" for="password">Password</h6>
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-control form-control-lg"
+                        [(ngModel)]="password"
+                      />
+                    </div>
+                  </div>
+
+                  <button type="button" class="ODButton" (click)="proceed()">
+                    Place Your Order
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

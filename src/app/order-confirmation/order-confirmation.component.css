@@ -1,0 +1,91 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .bg-grey {
+    background-color: #eae8e8;
+    }
+    
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-grey {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    }
+    }
+    
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-grey {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    }
+    }
+
+
+.section-header
+{
+    padding-bottom: 0;
+    margin-bottom: 0 !important;
+}
+
+.mb-5 {
+    margin-bottom: 1.5rem!important;
+}
+
+.section
+{
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.justify-content-between {
+    grid-column-gap: 40px;
+}
+
+.ODButton
+{
+    font-family: var(--fon-secondary);
+    font-size: 25px;
+    color: #fff;
+    background: var(--color-primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+    border-width: 0ch;
+    transition: 0.3s;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-165%, 260%)
+
+}
+
+.OrderTitle
+{
+    font-family: var(--font-primary);
+    font-size: 90px;
+    font-weight: 400;
+    text-align: center
+}
+
+.img-fluid
+{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; 
+}

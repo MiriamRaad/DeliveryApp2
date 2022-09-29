@@ -1,0 +1,121 @@
+<section style="background-color: #f93d3d">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12">
+        <div
+          class="card card-registration card-registration-2"
+          style="border-radius: 15px"
+        >
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-lg">
+                <div class="p-5 pt-3">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-5 section-header"
+                  >
+                    <p>Order Address</p>
+                  </div>
+                  <div class="bg-grey">
+                    <div class="p-5 section">
+                      <div class="row g-3">
+                        <div class="form-group col-md-6">
+                          <h6 for="fname" class="form-label">First Name</h6>
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            id="fname"
+                            required
+                            [(ngModel)]="fname"
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <h6 for="lname" class="form-label">Last Name</h6>
+                          <input
+                            type="text"
+                            class="form-control form-control-lg"
+                            id="lname"
+                            required
+                            [(ngModel)]="lname"
+                          />
+                        </div>
+                        <div class="form-group col-md-12">
+                          <h6 class="form-label" for="email">Email</h6>
+                          <input
+                            id="email"
+                            type="email"
+                            class="form-control form-control-lg"
+                            required
+                            [(ngModel)]="email"
+                          />
+                        </div>
+                        <div class="form-group col-md-12">
+                          <div class="form-outline">
+                            <h6 class="form-label" for="address">Address</h6>
+                            <input
+                              id="address"
+                              type="text"
+                              class="form-control form-control-lg"
+                              required
+                              [(ngModel)]="address"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <div class="form-outline">
+                            <h6 class="form-label" for="city">City</h6>
+                            <input
+                              type="text"
+                              id="city"
+                              class="form-control form-control-lg"
+                              required
+                              [(ngModel)]="city"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <div class="form-outline">
+                            <h6 class="form-label" for="state">State</h6>
+                            <input
+                              type="text"
+                              id="state"
+                              class="form-control form-control-lg"
+                              required
+                              [(ngModel)]="state"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                          <div class="form-outline">
+                            <h6 class="form-label" for="zipcode">Zipcode</h6>
+                            <input
+                              type="text"
+                              id="zipcode"
+                              class="form-control form-control-lg"
+                              [(ngModel)]="zipcode"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <button
+                            type="submit"
+                            class="ODButton AddressButton"
+                            (click)="submitOrder()"
+                          >
+                            Confirm Your Order
+                          </button>
+                          <button type="reset" value="Reset" class="ODButton">
+                            Clear Form
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+<navbar></navbar>
+
+<section id="why-us" class="why-us section-bg">
+  <div class="section-header pt-5">
+    <h2 class="pt-4">Restaurants</h2>
+    <p>Check Our <span>Restaurants</span></p>
+  </div>
+
+  <div class="container" data-aos="fade-up">
+    <div class="row gy-4">
+      <!-- Icon Box -->
+      <div (click)="foodlist(item)" *ngFor="let item of restaurants; let i=index;" class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+          <img class = "Rest-Logo" [src]="item.imgUrl">
+          <h4>{{item.name}}</h4>
+          <p>
+            {{item.description}}
+          </p>
+        </div>
+      </div>
+      <!-- End Icon Box -->
+    </div>
+  </div>
+</section>
